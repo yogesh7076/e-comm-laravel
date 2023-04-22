@@ -28,5 +28,33 @@
         height: 500px;
         padding-top:100px
     }
+    img.slider-img{
+        width: 100%;
+        height: 600px !important;
+
+    }
+    .custom-product{
+        height: 600PX ;
+    }
+    .slider-text{
+        background-color: #24465454 !important;
+    }
+    .tredining-img{
+        height: 100px;
+    }
+    .tredining-item{
+        float: left;
+        width: 20%;
+    }
+    .trending-wrapper {
+    width: 100%;
+    margin: 20px;
+}
+    .detail-img{
+        height: 200px;
+    }
+    .search-box{
+        width: 500px !important;
+    }
   </style>
 </html>

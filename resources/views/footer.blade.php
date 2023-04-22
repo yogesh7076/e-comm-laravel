@@ -1,6 +1,6 @@
 <div class="card mt-5">
     <div class="card-header">
-      Quote
+   
     </div>
     <div class="card-body">
       <blockquote class="blockquote mb-0">
