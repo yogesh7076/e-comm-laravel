@@ -1,9 +1,16 @@
-
+<?php
+use App\Http\Controllers\ProductController;
+$total = 0;
+if(Session::has('user'))
+{
+$total = ProductController::cartItem();
+}
+?>
 
 
 <nav class="navbar navbar-expand-lg bg-body-tertiary">
     <div class="container-fluid">
-      <a class="navbar-brand" href="/">E-Comm</a>
+      <a class="navbar-brand" href="">E-Comm</a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
@@ -22,7 +29,7 @@
             <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
           </form>
           <ul class="nav navbar-nav navbar-rigth">
-            <li><a  href="#">Cart Item</a></li>
+            <li><a  href="#">Cart Item({{ $total }})</a></li>
              @if(Session::has('user'))
                 <li class="dropdown">
                     <a class="dropdown-toggle" data-toggle="dropdown" href="">{{ Session::get('user')['name']}}
