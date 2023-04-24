@@ -15,8 +15,15 @@
              <h4>Category :- {{ $data['category'] }}</h4>
              <h5>Description :-{{ $data['description'] }}</h5>
              <br><br>
-             <button class="btn btn-light">Add to Cart</button>
+
              <br><br>
+
+             <form action="/add_to_cart" method="post">
+                @csrf
+                <input type="hidden" name="product_id" value="{{$data['id'] }}">
+
+                <button class="btn btn-success">Add to Cart</button>
+             </form><br><br>
 
              <button class="btn btn-info">Buy Now</button>
 

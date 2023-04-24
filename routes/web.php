@@ -16,6 +16,12 @@ use App\Http\Controllers\Usercontroller;
 |
 */
 
+Route::get('/logout', function () {
+   Session::forget('user');
+    return redirect ('/login');
+
+});
+
 Route::get('/login', function () {
     return view('login');
 });
@@ -25,4 +31,7 @@ Route::get('/login', function () {
 Route::post('/login',[Usercontroller::class,'login']);
 Route::get('/',[ProductController::class,'index']);
 Route::get("detail/{id}",[ProductController::class, 'detail']);
-Route::get("search/{id}",[ProductController::class,'search']);
+Route::get("search",[ProductController::class,'search']);
+
+
+Route::post("add_to_cart",[ProductController::class,'addToCart']);
