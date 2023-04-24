@@ -5,9 +5,8 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\Product;
 use App\Models\Cart;
+use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Session;
-
-use illuminate\Support\Facades\DB;
 
 
 class ProductController extends Controller
@@ -60,7 +59,17 @@ class ProductController extends Controller
     }
 
     function cartList(){
-        return "hello world";
+       $userId= Session::get('user')['id'];
+
+     $data =  DB::table('cart')
+       ->join('products','cart.product_id','products.id')
+       ->select('products.*')
+       ->where('cart.user_id', $userId)
+       ->get();
+
+       return view('cartlist',compact('data'));
+
+
     }
 
 

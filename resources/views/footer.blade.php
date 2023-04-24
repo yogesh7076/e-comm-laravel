@@ -1,11 +1,6 @@
-<div class="card mt-5">
-    <div class="card-header">
-   
+<div style="clear:both" class="panel panel-default">
+    <div class="panel-body">
+      Panel content
     </div>
-    <div class="card-body">
-      <blockquote class="blockquote mb-0">
-        <p>A well-known quote, contained in a blockquote element.</p>
-        <footer class="blockquote-footer">Someone famous in <cite title="Source Title">Source Title</cite></footer>
-      </blockquote>
-    </div>
+    <div class="panel-footer">Panel footer</div>
   </div>

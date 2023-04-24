@@ -3,7 +3,7 @@
 use App\Http\Controllers\ProductController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Usercontroller;
-use Session;
+use Illuminate\Support\Facades\Session;
 
 /*
 |--------------------------------------------------------------------------
@@ -32,6 +32,7 @@ Route::post('/login',[Usercontroller::class,'login']);
 Route::get('/',[ProductController::class,'index']);
 Route::get("detail/{id}",[ProductController::class, 'detail']);
 Route::get("search",[ProductController::class,'search']);
+Route::get("cartlist",[ProductController::class,'cartList']);
 
 
 Route::post("add_to_cart",[ProductController::class,'addToCart']);
