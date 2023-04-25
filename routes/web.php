@@ -36,3 +36,8 @@ Route::get("cartlist",[ProductController::class,'cartList']);
 
 
 Route::post("add_to_cart",[ProductController::class,'addToCart']);
+
+ROute::get("romovecart/{id}",[ProductController::class,'romoveCart']);
+ROute::get("odernow",[ProductController::class,'orderNow']);
+ROute::post("orderplace",[ProductController::class,'orderPlace']);
+ROute::get("myorders",[ProductController::class,'myOrder']);
